@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather App</title>
+</head>
+<body>
+    <h1>Weather for {{ weather.city }}</h1>
+    {% if weather %}
+        <p>Temperature: {{ weather.temperature }} °C</p>
+        <p>Description: {{ weather.description }}</p>
+        <p>Humidity: {{ weather.humidity }}%</p>
+        <p>Wind Speed: {{ weather.wind_speed }} m/s</p>
+    {% else %}
+        <p>City not found. Please try again.</p>
+    {% endif %}
+    <a href="/">Back to Home</a>
+</body>
+</html>
